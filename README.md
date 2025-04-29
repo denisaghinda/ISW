@@ -52,4 +52,7 @@ npm start
 Accesează aplicația la `http://localhost:3000` după rulare.
 
 ## Autor
-- Denisa Ghinda
+- Ghinda Denisa-Maria
+- Jinga Oana-Alexandra
+- Andrei Elena-Iuliana
+- Roman Denise-Maria
