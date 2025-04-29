@@ -1,0 +1,207 @@
+/* Stilizare pentru header-ul aplicației */
+.app-header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box; /* Asigură că marginile și padding-ul sunt incluse în lățimea totală */
+}
+
+.app-header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Stil general pentru fonturi și layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column; /* Aranjează elementele vertical */
+}
+
+.container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrare conținut */
+}
+
+/* Stilizare pentru componenta Login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login-container form {
+  width: 100%;
+  max-width: 400px; /* Asigură că formularul are o lățime maximă */
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input[type="text"], input[type="password"], input[type="date"], select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Stilizare pentru link-ul de inregistrare */
+span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Centrăm secțiunea de add task */
+.add-task-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.add-task-container form {
+  width: 100%;
+  max-width: 400px; /* Lățimea maximă a formularului */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Asigură centrul elementelor din formular */
+}
+
+/* Stiluri pentru input-uri din formularul de add task */
+.add-task-container input, .add-task-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Butonul de adăugare a task-ului */
+.add-task-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+  background-color: #45a049;
+}
+
+/* Stilizare pentru TaskList */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.task-item span {
+  display: inline-block;
+}
+
+.task-item button {
+  background-color: #f44336;
+  width: auto;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  margin: 0;
+  transition: background-color 0.3s;
+}
+
+.task-item button:hover {
+  background-color: #d32f2f;
+}
+
+/* Stilizare pentru prioritate */
+.task-item[data-priority="High"] {
+  border-left: 15px solid #eb0303; /* Roșu */
+}
+
+.task-item[data-priority="Medium"] {
+  border-left: 15px solid #fc8506; /* Portocaliu */
+}
+
+.task-item[data-priority="Low"] {
+  border-left: 15px solid #dcf809; /* Galben */
+}
+
+/* Buton logout */
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
