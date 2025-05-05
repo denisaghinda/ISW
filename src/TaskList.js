@@ -9,27 +9,32 @@ const TaskList = ({ username }) => { // Componenta TaskList primește username c
     const [editedTaskName, setEditedTaskName] = useState(''); // Stare pentru a stoca numele editat al unui task.
     const [editedTaskStatus, setEditedTaskStatus] = useState(''); // Stare pentru a stoca statusul editat al unui task.
 
+    
     useEffect(() => { // Se execută la montarea componentei sau când username se schimbă.
         const savedTasks = JSON.parse(localStorage.getItem(username + '_tasks')) || []; // Încarcă task-urile salvate pentru utilizatorul curent din localStorage.
         setTasks(savedTasks); // Actualizează starea tasks cu valorile încărcate.
     }, [username]); // Efectul se execută când username se modifică.
 
+    
     useEffect(() => { // Se execută ori de câte ori tasks sau username se schimbă.
         localStorage.setItem(username + '_tasks', JSON.stringify(tasks)); // Salvează task-urile curente în localStorage.
     }, [tasks, username]);
 
+    
     useEffect(() => { // Se execută la montarea componentei.
         if (Notification.permission !== 'granted') { // Dacă permisiunea pentru notificări nu este acordată...
             Notification.requestPermission(); // Cere permisiunea pentru notificări.
         }
     }, []); // Efectul se execută o singură dată, la montare.
 
+    
     const sendNotification = (message) => { // Funcție pentru trimiterea notificărilor.
         if (Notification.permission === 'granted') { // Dacă permisiunea este acordată...
             new Notification(message); // Trimite o notificare cu mesajul primit ca parametru.
         }
     };
 
+    
     const addTask = () => { // Funcție pentru adăugarea unui task nou.
         if (taskName.trim() === '') { // Verifică dacă numele task-ului este gol.
             alert('Task name is required.'); // Afișează un mesaj de eroare.
